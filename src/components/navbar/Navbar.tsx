@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <div className="w-full border-bottom fixed nav-bg top-0">
+    <div className="w-full border-bottom fixed nav-bg top-0 z-50">
       <div className=" mx-auto max-w-[1440px] flex items-center justify-between py-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"

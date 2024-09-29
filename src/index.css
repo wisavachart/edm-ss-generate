@@ -27,3 +27,21 @@ body {
 .icon-border {
   border: 2px solid #f1f1f2;
 }
+.btn-border {
+  border: 1px solid #d6d6d6;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.file-name-input {
+  font-size: 12px;
+  width: 50px;
+  background-color: transparent;
+}
+.file-name-input:focus {
+  outline: none;
+  border: none;
+}
