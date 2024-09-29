@@ -6,7 +6,7 @@ const ControlLayout = () => {
     <div className="mt-[56.67px] w-full relative check- ml-[190px]">
       {/* BG */}
       <div className="absolute top-0 flex overflow-hidden z-0">
-        <img src="/src/assets/bg/bg.png" alt="" />
+        <img src="bg/bg.png" alt="" />
       </div>
       <div className="ml-6 pt-8 relative z-10 flex gap-4">
         <PanelLayout />
