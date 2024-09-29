@@ -16,11 +16,8 @@ const Navbar = () => {
             transform="translate(8 8)"></path>
         </svg>
         <div className="flex gap-4 items-center">
-          <h1 className="text-[14px] leading-none text-text_color">
-            SAMSUNG EDM MAKER
-          </h1>
-          <div className="h-[20px] w-[1px] bg-gray-200"></div>
-          <h1 className="font-bold leading-none text-text_color">DASHBOARD</h1>
+          <div className="h-[20px] w-[1px] bg-ct_2"></div>
+          <h1 className="font-bold leading-none text-ct_4">Dashboard</h1>
         </div>
       </div>
     </div>
