@@ -1,4 +1,5 @@
 import useGetFileName from "../../hooks/useGetFileName";
+import CodeArea from "./code-display-codeArea";
 import CodeDisplayHeader from "./code-display-header";
 
 // THIS IS MAIN CODE DISPLAY PARENT
@@ -32,7 +33,9 @@ const CodeDisplay = () => {
           </div>
         </div>
         {/* Code Area lib */}
-        <div className="check mt-5">asd</div>
+        <div className="mt-5">
+          <CodeArea />
+        </div>
       </div>
     </div>
   );
