@@ -1,50 +1,8 @@
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 const CodeArea = () => {
-  const markUp = `<table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>
-  <table></table>`;
+  const markUpDIGI = `<table>DIGI</table>`;
+  // const markUpTPS = `<table>TPS</table>`;
 
   return (
     <SyntaxHighlighter
@@ -55,7 +13,7 @@ const CodeArea = () => {
         background: "transparent",
         fontSize: "13px",
       }}>
-      {markUp}
+      {markUpDIGI}
     </SyntaxHighlighter>
   );
 };
