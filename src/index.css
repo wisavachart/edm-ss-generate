@@ -6,6 +6,18 @@
 body {
   font-family: "Inter", sans-serif;
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #475569;
+}
+
 .check {
   border: 1px solid red;
 }

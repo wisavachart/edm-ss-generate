@@ -35,7 +35,7 @@ const CodeDisplay = () => {
           linkNum={fileNameValue.linkNum}
         />
         {/* Syntax Highlight lib */}
-        <div className="mt-5 px-4 h-full overflow-scroll pb-3">
+        <div className="mt-5 px-4 h-[85%] overflow-scroll">
           <CodeArea />
         </div>
       </div>
