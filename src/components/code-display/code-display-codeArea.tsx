@@ -1,70 +1,7 @@
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 const CodeArea = () => {
-  const markUpDIGI = `<table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>
-  <table>DIGI</table>`;
+  const markUpDIGI = `<table>DIGI</table>`;
   // const markUpTPS = `<table>TPS</table>`;
 
   return (
