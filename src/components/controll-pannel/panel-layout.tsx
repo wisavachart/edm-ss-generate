@@ -47,7 +47,7 @@ const PanelLayout = () => {
           <div className="flex justify-between items-center">
             <h1 className="text-[14px] font-medium">Add row</h1>
             <div className="flex items-center gap-4">
-              <img src="/src/assets/icons/row.svg" alt="" />
+              <img src="icons/row.svg" alt="" />
               <h1 className="text-[20px] font-bold text-cb_4 px-2 bg-ct_1 rounded-md">
                 +
               </h1>
@@ -59,7 +59,7 @@ const PanelLayout = () => {
           <div className="flex justify-between items-center">
             <h1 className="text-[14px] font-medium">Add column in row</h1>
             <div className="flex items-center gap-4">
-              <img src="/src/assets/icons/column.svg" alt="" />
+              <img src="icons/column.svg" alt="" />
               <h1 className="text-[20px] font-bold text-cb_4 px-2 bg-ct_1 rounded-md">
                 +
               </h1>
