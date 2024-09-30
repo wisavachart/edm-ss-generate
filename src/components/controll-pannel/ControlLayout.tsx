@@ -1,6 +1,6 @@
 import CodeDisplay from "../code-display/CodeDisplay";
 import PanelLayout from "./panel-layout";
-
+// THIS IS PARENT CONTROL PANEL
 const ControlLayout = () => {
   return (
     <div className="mt-[56.67px] w-full relative check- ml-[190px]">

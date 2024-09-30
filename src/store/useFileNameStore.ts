@@ -1,9 +1,5 @@
 import { create } from "zustand";
-
-type FileName = {
-  edmNum: string;
-  linkNum: string;
-};
+import { FileName } from "../type";
 
 type FileNameState = {
   fileNameValue: FileName;

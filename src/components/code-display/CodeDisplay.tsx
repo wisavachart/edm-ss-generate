@@ -1,14 +1,15 @@
+import useGetFileName from "../../hooks/useGetFileName";
+import CodeDisplayHeader from "./code-display-header";
+
+// THIS IS MAIN CODE DISPLAY PARENT
 const CodeDisplay = () => {
+  const { fileNameValue } = useGetFileName();
   return (
     <div className="w-full flex flex-col gap-3">
-      <div className="flex gap-16">
-        <h1 className="font-semibold text-ct_3 text-[14px] ">
-          EDM ID :<span className="text-ct_4"> 123456</span>
-        </h1>
-        <h1 className="font-semibold text-ct_3 text-[14px] ">
-          Link : <span className="text-ct_4"> 456</span>{" "}
-        </h1>
-      </div>
+      <CodeDisplayHeader
+        edmNum={fileNameValue.edmNum}
+        linkNum={fileNameValue.linkNum}
+      />
       <div className="rounded-md bg-cb_4 h-[800px]"></div>
     </div>
   );

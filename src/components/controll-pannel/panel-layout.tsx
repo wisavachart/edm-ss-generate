@@ -3,7 +3,6 @@ import PreviewElement from "./preview-element";
 
 const PanelLayout = () => {
   const { fileNameValue, handleFileNameChange } = useGetFileName();
-
   return (
     <div className="flex flex-col gap-3">
       <h1 className="font-semibold text-ct_3 text-[14px] ">Layout</h1>
@@ -48,7 +47,7 @@ const PanelLayout = () => {
             <h1 className="text-[14px] font-medium">Add row</h1>
             <div className="flex items-center gap-4">
               <img src="icons/row.svg" alt="" />
-              <h1 className="text-[20px] font-bold text-cb_4 px-2 bg-ct_1 rounded-md">
+              <h1 className="text-[20px] font-bold text-cb_4 px-2 bg-ct_1 hover:bg-ct_2  rounded-md cursor-pointer">
                 +
               </h1>
             </div>
@@ -60,7 +59,7 @@ const PanelLayout = () => {
             <h1 className="text-[14px] font-medium">Add column in row</h1>
             <div className="flex items-center gap-4">
               <img src="icons/column.svg" alt="" />
-              <h1 className="text-[20px] font-bold text-cb_4 px-2 bg-ct_1 rounded-md">
+              <h1 className="text-[20px] font-bold text-cb_4 px-2 bg-ct_1 hover:bg-ct_2  rounded-md cursor-pointer">
                 +
               </h1>
             </div>
