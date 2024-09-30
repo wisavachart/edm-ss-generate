@@ -7,7 +7,7 @@ import CodeDisplayHeader from "./code-display-header";
 const CodeDisplay = () => {
   const { fileNameValue } = useGetFileName();
   return (
-    <div className="w-full flex flex-col gap-3">
+    <div className="w-[910px] flex flex-col gap-3">
       <CodeDisplayHeader
         edmNum={fileNameValue.edmNum}
         linkNum={fileNameValue.linkNum}
