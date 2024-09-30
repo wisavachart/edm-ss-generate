@@ -1,5 +1,6 @@
 import useGetFileName from "../../hooks/useGetFileName";
 import CodeArea from "./code-display-codeArea";
+import FileTab from "./code-display-fileTab";
 import CodeDisplayHeader from "./code-display-header";
 
 // THIS IS MAIN CODE DISPLAY PARENT
@@ -22,17 +23,11 @@ const CodeDisplay = () => {
           ))}
         </div>
         {/* File Tab */}
-        <div className="border-bottom-filename flex px-3 h-[32px] relative">
-          <div className="flex gap-5 absolute -bottom-[2px]">
-            <div className="border-bottom-filename-select py-1">
-              <h6 className="text-cs_3 text-[14px]">{`${fileNameValue.edmNum}_${fileNameValue.linkNum}_digi.html`}</h6>
-            </div>
-            <div className="py-1">
-              <h6 className="text-cs_3 text-[14px]">{`${fileNameValue.edmNum}_${fileNameValue.linkNum}_tps.html`}</h6>
-            </div>
-          </div>
-        </div>
-        {/* Code Area lib */}
+        <FileTab
+          edmNum={fileNameValue.edmNum}
+          linkNum={fileNameValue.linkNum}
+        />
+        {/* Syntax Highlight lib */}
         <div className="mt-5">
           <CodeArea />
         </div>

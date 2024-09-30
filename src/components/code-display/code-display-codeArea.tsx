@@ -1,9 +1,14 @@
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 const CodeArea = () => {
   const markUp = `<table></table>`;
+
   return (
-    <SyntaxHighlighter language="javascript" style={docco}>
+    <SyntaxHighlighter
+      showLineNumbers={true}
+      language="jsx"
+      style={atomOneDark}
+      customStyle={{ background: "transparent", fontSize: "13px" }}>
       {markUp}
     </SyntaxHighlighter>
   );
