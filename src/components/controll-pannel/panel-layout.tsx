@@ -1,6 +1,9 @@
+import useGetFileName from "../../hooks/useGetFileName";
 import PreviewElement from "./preview-element";
 
 const PanelLayout = () => {
+  const { fileNameValue, handleFileNameChange } = useGetFileName();
+
   return (
     <div className="flex flex-col gap-3">
       <h1 className="font-semibold text-ct_3 text-[14px] ">Layout</h1>
@@ -9,24 +12,35 @@ const PanelLayout = () => {
         {/* FILE NAME */}
         <div className="flex flex-col border-bottom px-4 py-3 gap-3">
           <h1 className="text-[14px] font-medium">File name</h1>
-          <div className="flex gap-2">
-            <div className="flex gap-2 items-center bg-ct_1 rounded-md flex-1">
-              <h6 className="text-[12px] text-ct_3 px-2">EDM ID :</h6>
-              <input
-                type="number"
-                className="file-name-input py-1"
-                placeholder="0"
-              />
+          {/* FILE NAME FORM */}
+          <form>
+            <div className="flex gap-2">
+              <div className="flex gap-2 items-center bg-ct_1 rounded-md flex-1">
+                <h6 className="text-[12px] text-ct_3 px-2">EDM ID :</h6>
+                <input
+                  id="edmNum"
+                  name="edmNum"
+                  value={fileNameValue.edmNum}
+                  type="number"
+                  className="file-name-input py-1"
+                  placeholder="0"
+                  onChange={(event) => handleFileNameChange("edmNum", event)}
+                />
+              </div>
+              <div className="flex gap-2 items-center bg-ct_1 rounded-md flex-1">
+                <h6 className="text-[12px] text-ct_3 px-2">Link :</h6>
+                <input
+                  id="linkNum"
+                  name="linkNum"
+                  value={fileNameValue.linkNum}
+                  type="number"
+                  className="file-name-input py-1"
+                  placeholder="0"
+                  onChange={(event) => handleFileNameChange("linkNum", event)}
+                />
+              </div>
             </div>
-            <div className="flex gap-2 items-center bg-ct_1 rounded-md flex-1">
-              <h6 className="text-[12px] text-ct_3 px-2">Link :</h6>
-              <input
-                type="number"
-                className="file-name-input py-1"
-                placeholder="0"
-              />
-            </div>
-          </div>
+          </form>
         </div>
         {/* ADD ROW */}
         <div className="border-bottom px-4 py-3">
