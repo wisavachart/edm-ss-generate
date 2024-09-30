@@ -13,9 +13,9 @@ const CodeDisplay = () => {
         linkNum={fileNameValue.linkNum}
       />
       {/* Code display Area */}
-      <div className="rounded-md bg-cb_4 h-[800px]">
+      <div className="rounded-md bg-cb_4 h-[800px] flex flex-col">
         {/* dot & Copy */}
-        <div className="w-full flex justify-between p-4">
+        <div className="w-full flex justify-between p-4 items-center">
           <div className="flex  gap-2 ">
             {[...Array(3)].map((_, i) => (
               <div
@@ -35,7 +35,7 @@ const CodeDisplay = () => {
           linkNum={fileNameValue.linkNum}
         />
         {/* Syntax Highlight lib */}
-        <div className="mt-5 px-4">
+        <div className="mt-5 px-4 h-full overflow-scroll pb-3">
           <CodeArea />
         </div>
       </div>
