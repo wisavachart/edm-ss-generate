@@ -31,7 +31,6 @@ const CodeDisplay = () => {
             <h6 className="text-cb_3 text-[14px] font-semibold">copy</h6>
           </div>
         </div>
-
         {/* File Tab */}
         <FileTab
           edmNum={fileNameValue.edmNum}

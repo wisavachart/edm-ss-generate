@@ -3,6 +3,7 @@ import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { edm_DIGI_header, edm_TPS_header } from "../../parts/edm-header-part";
 import { FileTabs } from "../../enum";
 import { getTPSFooter } from "../../parts/edm-footer-part";
+import { getConditionPart } from "../../parts/edm-condition-section";
 
 type CodeAreaPROPS = {
   linkNum: string;
@@ -10,8 +11,11 @@ type CodeAreaPROPS = {
 };
 
 const CodeArea = ({ linkNum, activeTab }: CodeAreaPROPS) => {
+  console.log("CodeArea render");
   const markUpDIGI = `${edm_DIGI_header}`;
-  const markUpTPS = `${edm_TPS_header}${getTPSFooter(linkNum)}`;
+  const markUpTPS = `${edm_TPS_header}${getConditionPart()}${getTPSFooter(
+    linkNum
+  )}`;
 
   const getActiveMarkup = (fileTab: FileTabs) => {
     switch (fileTab) {

@@ -2,7 +2,7 @@ import useGetFileName from "../../hooks/useGetFileName";
 import PreviewElement from "./preview-element";
 
 const PanelLayout = () => {
-  const { fileNameValue, handleFileNameChange } = useGetFileName();
+  const { handleChange } = useGetFileName();
   return (
     <div className="flex flex-col gap-3">
       <h1 className="font-semibold text-ct_3 text-[14px] ">Layout</h1>
@@ -19,11 +19,11 @@ const PanelLayout = () => {
                 <input
                   id="edmNum"
                   name="edmNum"
-                  value={fileNameValue.edmNum}
+                  // value={fileNameValue.edmNum}
                   type="number"
                   className="file-name-input py-1"
                   placeholder="0"
-                  onChange={(event) => handleFileNameChange("edmNum", event)}
+                  onChange={(event) => handleChange("edmNum", event)}
                 />
               </div>
               <div className="flex gap-2 items-center bg-ct_1 rounded-md flex-1">
@@ -31,15 +31,20 @@ const PanelLayout = () => {
                 <input
                   id="linkNum"
                   name="linkNum"
-                  value={fileNameValue.linkNum}
+                  // value={fileNameValue.linkNum}
                   type="number"
                   className="file-name-input py-1"
                   placeholder="0"
-                  onChange={(event) => handleFileNameChange("linkNum", event)}
+                  onChange={(event) => handleChange("linkNum", event)}
                 />
               </div>
             </div>
           </form>
+          {/* <div className="">
+            <button className="font-medium text-[14px] w-full btn-border rounded-sm">
+              Set Filename
+            </button>
+          </div> */}
         </div>
         {/* ADD ROW */}
         <div className="border-bottom px-4 py-3">
