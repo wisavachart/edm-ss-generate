@@ -1,11 +1,14 @@
 import useGetFileName from "../../hooks/useGetFileName";
+import useFileNameTabStore from "../../store/useFileNameTabStore";
 import CodeArea from "./code-display-codeArea";
 import FileTab from "./code-display-fileTab";
 import CodeDisplayHeader from "./code-display-header";
 
-// THIS IS MAIN CODE DISPLAY PARENT
+// THIS IS MAIN CODE DISPLAY PARENT START INJECT PROPS FROM HERE
 const CodeDisplay = () => {
   const { fileNameValue } = useGetFileName();
+  const { activeTab, setActiveTab } = useFileNameTabStore();
+
   return (
     <div className="w-[910px] flex flex-col gap-3">
       <CodeDisplayHeader
@@ -33,10 +36,14 @@ const CodeDisplay = () => {
         <FileTab
           edmNum={fileNameValue.edmNum}
           linkNum={fileNameValue.linkNum}
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
         />
         {/* Syntax Highlight lib */}
-        <div className="mt-5 px-4 h-[85%] overflow-scroll">
-          <CodeArea />
+        <div className="mt-5 px-4 h-[85%] overflow-y-scroll overflow-x-auto relative">
+          <div className="absolute">
+            <CodeArea linkNum={fileNameValue.linkNum} activeTab={activeTab} />
+          </div>
         </div>
       </div>
     </div>
