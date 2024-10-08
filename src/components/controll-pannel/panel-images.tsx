@@ -1,8 +1,10 @@
 import useGetConditionImg from "../../hooks/useGetConditionImg";
+import useGetContentImg from "../../hooks/useGetContentImg";
 
 const PanelImages = () => {
   const { conditionImageData, handleConditionImageUpload } =
     useGetConditionImg();
+  const { contentImageData, handleContentImageUpload } = useGetContentImg();
 
   return (
     <div className="flex flex-col gap-3">
@@ -22,7 +24,7 @@ const PanelImages = () => {
                 type="file"
                 multiple
                 accept="image/*"
-                // onChange={(e) => handleConditionImageUpload(e)}
+                onChange={(e) => handleContentImageUpload(e)}
                 className="hidden"
               />
             </label>
@@ -50,8 +52,26 @@ const PanelImages = () => {
         </div>
 
         {/* display area */}
+        <h1>Condition</h1>
         <div className="flex flex-col">
           {conditionImageData.map((image: any, index: any) => (
+            <div key={index} style={{ margin: "10px 0" }}>
+              <p className="text-[14px]">
+                <strong>Name:</strong> {image.name}
+              </p>
+              <p className="text-[14px]">
+                <strong>Width:</strong> {image.width}px
+              </p>
+              <p className="text-[14px]">
+                <strong>Height:</strong> {image.height}px
+              </p>
+            </div>
+          ))}
+        </div>
+        {/* display area */}
+        <h1>Content</h1>
+        <div className="flex flex-col">
+          {contentImageData.map((image: any, index: any) => (
             <div key={index} style={{ margin: "10px 0" }}>
               <p className="text-[14px]">
                 <strong>Name:</strong> {image.name}

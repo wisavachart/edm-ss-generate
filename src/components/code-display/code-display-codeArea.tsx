@@ -8,6 +8,7 @@ import {
   getTPSConditionPart,
 } from "../../parts/edm-condition-section";
 import { contditionImageData } from "../../type";
+import useGetLayout from "../../hooks/useGetLayout";
 
 type CodeAreaPROPS = {
   linkNum: string;
@@ -20,10 +21,11 @@ const CodeArea = ({
   activeTab,
   conditionImageData,
 }: CodeAreaPROPS) => {
+  const { markUpTps } = useGetLayout();
   const markUpDIGI = `${edm_DIGI_header}${getDIGICondotionPart(
     conditionImageData
   )}`;
-  const markUpTPS = `${edm_TPS_header}${getTPSConditionPart(
+  const markUpTPS = `${edm_TPS_header}${markUpTps}${getTPSConditionPart(
     conditionImageData
   )}${getTPSFooter(linkNum)}`;
 

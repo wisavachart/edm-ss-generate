@@ -98,12 +98,7 @@ const PanelLayout = () => {
             <button
               onClick={handleCreateHTML}
               className="font-medium text-[14px] w-full btn-border rounded-sm">
-              Add Content Section
-            </button>
-            <button
-              onClick={handleCreateHTML}
-              className="font-medium text-[14px] w-full btn-border rounded-sm">
-              Add Condition Section
+              Create Content
             </button>
           </div>
         </div>
