@@ -1,3 +1,4 @@
+import useGetConditionImg from "../../hooks/useGetConditionImg";
 import useGetFileName from "../../hooks/useGetFileName";
 import useFileNameTabStore from "../../store/useFileNameTabStore";
 import CodeArea from "./code-display-codeArea";
@@ -8,6 +9,7 @@ import CodeDisplayHeader from "./code-display-header";
 const CodeDisplay = () => {
   const { fileNameValue } = useGetFileName();
   const { activeTab, setActiveTab } = useFileNameTabStore();
+  const { conditionImageData } = useGetConditionImg();
 
   return (
     <div className="w-[910px] flex flex-col gap-3">
@@ -41,7 +43,11 @@ const CodeDisplay = () => {
         {/* Syntax Highlight lib */}
         <div className="mt-5 px-4 h-[85%] overflow-y-scroll overflow-x-auto relative">
           <div className="absolute">
-            <CodeArea linkNum={fileNameValue.linkNum} activeTab={activeTab} />
+            <CodeArea
+              linkNum={fileNameValue.linkNum}
+              activeTab={activeTab}
+              conditionImageData={conditionImageData}
+            />
           </div>
         </div>
       </div>

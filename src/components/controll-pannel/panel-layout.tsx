@@ -7,7 +7,7 @@ const PanelLayout = () => {
   //Input filename
   const { handleChange, localValues } = useGetFileName();
   //Input Layout
-  const { addCol, addRow } = useGetLayout();
+  const { addCol, addRow, handleCreateHTML } = useGetLayout();
 
   return (
     <div className="flex flex-col gap-3">
@@ -95,8 +95,15 @@ const PanelLayout = () => {
           </div>
           {/* BTN RESET CREATE */}
           <div className="">
-            <button className="font-medium text-[14px] w-full btn-border rounded-sm">
-              Create HTML Tag
+            <button
+              onClick={handleCreateHTML}
+              className="font-medium text-[14px] w-full btn-border rounded-sm">
+              Add Content Section
+            </button>
+            <button
+              onClick={handleCreateHTML}
+              className="font-medium text-[14px] w-full btn-border rounded-sm">
+              Add Condition Section
             </button>
           </div>
         </div>

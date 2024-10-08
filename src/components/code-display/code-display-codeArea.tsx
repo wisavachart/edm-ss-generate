@@ -3,18 +3,29 @@ import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { edm_DIGI_header, edm_TPS_header } from "../../parts/edm-header-part";
 import { FileTabs } from "../../enum";
 import { getTPSFooter } from "../../parts/edm-footer-part";
-import { getConditionPart } from "../../parts/edm-condition-section";
+import {
+  getDIGICondotionPart,
+  getTPSConditionPart,
+} from "../../parts/edm-condition-section";
+import { contditionImageData } from "../../type";
 
 type CodeAreaPROPS = {
   linkNum: string;
   activeTab: FileTabs;
+  conditionImageData: contditionImageData[];
 };
 
-const CodeArea = ({ linkNum, activeTab }: CodeAreaPROPS) => {
-  const markUpDIGI = `${edm_DIGI_header}`;
-  const markUpTPS = `${edm_TPS_header}${getConditionPart()}${getTPSFooter(
-    linkNum
+const CodeArea = ({
+  linkNum,
+  activeTab,
+  conditionImageData,
+}: CodeAreaPROPS) => {
+  const markUpDIGI = `${edm_DIGI_header}${getDIGICondotionPart(
+    conditionImageData
   )}`;
+  const markUpTPS = `${edm_TPS_header}${getTPSConditionPart(
+    conditionImageData
+  )}${getTPSFooter(linkNum)}`;
 
   const getActiveMarkup = (fileTab: FileTabs) => {
     switch (fileTab) {
