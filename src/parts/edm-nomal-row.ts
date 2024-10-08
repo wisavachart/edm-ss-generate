@@ -1,5 +1,9 @@
 export const nomalRowTps = (
   index: number,
+  labelAndLink: {
+    label: string;
+    link: string;
+  },
   data?: { name: string; width: number; height: number }
 ) => {
   if (!data) {
@@ -10,7 +14,7 @@ export const nomalRowTps = (
             _label="04_ref_offer-warranty_cta"
             href="https://www.samsung.com/th/refrigerators/side-by-side/rs4000dc-sbside-with-large-capacity-rs4000dc-side-by-side-with-large-capacity-583l-silver-rs57dg4000m9st/?samid=|%DA-ZSEA_SEG_BASIC_V2-HASH_EMAIL%|&cid="
             target="_blank">
-            <!-- !IMG_${index + 1} -->
+            <!-- !IMG_${index + 1}-->
             <img
               src="images/IMGNAME?$ORIGIN_JPG$"
               alt=""
@@ -25,8 +29,10 @@ export const nomalRowTps = (
       <tr>
         <td width="700">
           <a
-            _label="04_ref_offer-warranty_cta"
-            href="https://www.samsung.com/th/refrigerators/side-by-side/rs4000dc-sbside-with-large-capacity-rs4000dc-side-by-side-with-large-capacity-583l-silver-rs57dg4000m9st/?samid=|%DA-ZSEA_SEG_BASIC_V2-HASH_EMAIL%|&cid="
+            _label="${labelAndLink.label}"
+            href="${
+              labelAndLink.link
+            }?samid=|%DA-ZSEA_SEG_BASIC_V2-HASH_EMAIL%|&cid="
             target="_blank">
             <!-- !IMG_${index + 1} -->
             <img

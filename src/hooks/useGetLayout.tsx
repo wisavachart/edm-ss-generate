@@ -3,6 +3,7 @@ import { openTableTagTPS } from "../parts/edm-header-part";
 import { nomalRowTps } from "../parts/edm-nomal-row";
 import contentImageStore from "../store/contentImageStore";
 import markUpTpsStore from "../store/markupTpsStore";
+import useLabelLinkStore from "../store/useLabelLinkStore";
 import useLayoutStore from "../store/useLayoutStore";
 
 const useGetLayout = () => {
@@ -12,6 +13,8 @@ const useGetLayout = () => {
   const markUpTps = markUpTpsStore((state) => state.markUpTps);
   const setMarkUpTps = markUpTpsStore((state) => state.setMarkUpTps);
   const contentImageData = contentImageStore((state) => state.images);
+  const labelAndLinkData = useLabelLinkStore((state) => state.labelLinks);
+
   const imgdata = Array(contentImageData.length).fill({
     name: "IMG",
     width: 0,
@@ -38,7 +41,7 @@ const useGetLayout = () => {
 
       //แถวปกติ
       // let nomalrow = `<tr><td></td></tr>`;
-      let nomalrow = `${nomalRowTps(i, imgdata[i])}`;
+      let nomalrow = `${nomalRowTps(i, labelAndLinkData[i], imgdata[i])}`;
       if (colsLength == 0) {
         markupText += nomalrow;
         i += 1;

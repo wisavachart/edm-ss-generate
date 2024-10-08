@@ -98,7 +98,7 @@ const PanelLayout = () => {
             <button
               onClick={handleCreateHTML}
               className="font-medium text-[14px] w-full btn-border rounded-sm">
-              Create Content
+              Create Html Tag
             </button>
           </div>
         </div>
