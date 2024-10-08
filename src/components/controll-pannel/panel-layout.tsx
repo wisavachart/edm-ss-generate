@@ -1,8 +1,14 @@
 import useGetFileName from "../../hooks/useGetFileName";
+import useGetLayout from "../../hooks/useGetLayout";
+
 import PreviewElement from "./preview-element";
 
 const PanelLayout = () => {
-  const { handleChange } = useGetFileName();
+  //Input filename
+  const { handleChange, localValues } = useGetFileName();
+  //Input Layout
+  const { addCol, addRow } = useGetLayout();
+
   return (
     <div className="flex flex-col gap-3">
       <h1 className="font-semibold text-ct_3 text-[14px] ">Layout</h1>
@@ -19,11 +25,13 @@ const PanelLayout = () => {
                 <input
                   id="edmNum"
                   name="edmNum"
-                  // value={fileNameValue.edmNum}
+                  value={localValues.edmNum}
                   type="number"
                   className="file-name-input py-1"
                   placeholder="0"
-                  onChange={(event) => handleChange("edmNum", event)}
+                  onChange={(event) => {
+                    handleChange("edmNum", event);
+                  }}
                 />
               </div>
               <div className="flex gap-2 items-center bg-ct_1 rounded-md flex-1">
@@ -31,7 +39,7 @@ const PanelLayout = () => {
                 <input
                   id="linkNum"
                   name="linkNum"
-                  // value={fileNameValue.linkNum}
+                  value={localValues.linkNum}
                   type="number"
                   className="file-name-input py-1"
                   placeholder="0"
@@ -52,7 +60,9 @@ const PanelLayout = () => {
             <h1 className="text-[14px] font-medium">Add row</h1>
             <div className="flex items-center gap-4">
               <img src="icons/row.svg" alt="" />
-              <h1 className="text-[20px] font-bold text-cb_4 px-2 bg-ct_1 hover:bg-ct_2  rounded-md cursor-pointer">
+              <h1
+                onClick={addRow}
+                className="text-[20px] font-bold text-cb_4 px-2 bg-ct_1 hover:bg-ct_2  rounded-md cursor-pointer">
                 +
               </h1>
             </div>
@@ -64,7 +74,9 @@ const PanelLayout = () => {
             <h1 className="text-[14px] font-medium">Add column in row</h1>
             <div className="flex items-center gap-4">
               <img src="icons/column.svg" alt="" />
-              <h1 className="text-[20px] font-bold text-cb_4 px-2 bg-ct_1 hover:bg-ct_2  rounded-md cursor-pointer">
+              <h1
+                onClick={addCol}
+                className="text-[20px] font-bold text-cb_4 px-2 bg-ct_1 hover:bg-ct_2  rounded-md cursor-pointer">
                 +
               </h1>
             </div>
@@ -91,7 +103,7 @@ const PanelLayout = () => {
         {/* Preview */}
         <div className=" px-4 pb-4">
           <h1 className="text-[12px] text-ct_3 pb-2">Preview</h1>
-          <div className="w-full  bg-ct_1 rounded-md flex justify-center py-4">
+          <div className="w-full  bg-ct_1 rounded-md items-center flex flex-col justify-center py-4 gap-[2px]">
             <PreviewElement />
           </div>
         </div>

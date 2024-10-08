@@ -11,7 +11,6 @@ type CodeAreaPROPS = {
 };
 
 const CodeArea = ({ linkNum, activeTab }: CodeAreaPROPS) => {
-  console.log("CodeArea render");
   const markUpDIGI = `${edm_DIGI_header}`;
   const markUpTPS = `${edm_TPS_header}${getConditionPart()}${getTPSFooter(
     linkNum
@@ -27,6 +26,7 @@ const CodeArea = ({ linkNum, activeTab }: CodeAreaPROPS) => {
         return markUpDIGI;
     }
   };
+
   return (
     <SyntaxHighlighter
       showLineNumbers={true}
