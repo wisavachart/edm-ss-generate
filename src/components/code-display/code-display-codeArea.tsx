@@ -21,8 +21,8 @@ const CodeArea = ({
   activeTab,
   conditionImageData,
 }: CodeAreaPROPS) => {
-  const { markUpTps } = useGetLayout();
-  const markUpDIGI = `${edm_DIGI_header}${getDIGICondotionPart(
+  const { markUpTps, markUpDIGI } = useGetLayout();
+  const markUpDigi = `${edm_DIGI_header}${markUpDIGI}${getDIGICondotionPart(
     conditionImageData
   )}`;
   const markUpTPS = `${edm_TPS_header}${markUpTps}${getTPSConditionPart(
@@ -32,11 +32,11 @@ const CodeArea = ({
   const getActiveMarkup = (fileTab: FileTabs) => {
     switch (fileTab) {
       case "DIGI":
-        return markUpDIGI;
+        return markUpDigi;
       case "TPS":
         return markUpTPS;
       default:
-        return markUpDIGI;
+        return markUpDigi;
     }
   };
 

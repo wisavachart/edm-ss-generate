@@ -13,20 +13,16 @@ const PanelLabelLink = () => {
 
       <div className="w-[300px] bg-white icon-border rounded-md shadow-sm pt-1">
         {/* ถ้า contentImageData มีข้อมูล ให้สร้าง input */}
-        {contentImageData.length > 0 ? (
-          contentImageData.map((_, index) => (
+        {labelLinks.length > 0 ? (
+          labelLinks.map((item, index) => (
             <div key={index} className="flex flex-col gap-2 p-2">
               <div className="flex flex-col">
                 <label className="text-sm">Label {index + 1}</label>
                 <input
                   type="text"
-                  value={labelLinks[index]?.label}
+                  value={item.label || ""}
                   onChange={(e) =>
-                    handleInputChange(
-                      index,
-                      e.target.value,
-                      labelLinks[index].link
-                    )
+                    handleInputChange(index, e.target.value, item.link)
                   }
                   placeholder={`Enter label for image ${index + 1}`}
                   className="w-full p-2 border border-gray-300 rounded-md text-sm"
@@ -36,13 +32,9 @@ const PanelLabelLink = () => {
                 <label className="text-sm">Link {index + 1}</label>
                 <input
                   type="text"
-                  value={labelLinks[index]?.link}
+                  value={item.link || ""}
                   onChange={(e) =>
-                    handleInputChange(
-                      index,
-                      labelLinks[index].label,
-                      e.target.value
-                    )
+                    handleInputChange(index, item.label, e.target.value)
                   }
                   placeholder={`Enter link for image ${index + 1}`}
                   className="w-full p-2 border border-gray-300 rounded-md text-sm"
