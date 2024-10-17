@@ -1,4 +1,7 @@
-import { createTpsColumnInRow } from "../parts/edm-column-in-row";
+import {
+  createDigiColumnInrow,
+  createTpsColumnInRow,
+} from "../parts/edm-column-in-row";
 import { openTableTagDIGI, openTableTagTPS } from "../parts/edm-header-part";
 import { nomalRowDigi, nomalRowTps } from "../parts/edm-nomal-row";
 import contentImageStore from "../store/contentImageStore";
@@ -35,6 +38,8 @@ const useGetLayout = () => {
     : imgdata;
 
   const handleCreateHTML = () => {
+    // Start ----->
+    let markupDigi = openTableTagDIGI();
     let markupText = openTableTagTPS();
 
     let i = 0;
@@ -43,30 +48,40 @@ const useGetLayout = () => {
       const lastIndex = boxes.length - 1;
 
       //แถวปกติ
-      // let nomalrow = `<tr><td></td></tr>`;
-      // let nomalrowDigi = `${nomalRowDigi(i, labelAndLinkData[i], imgdata[i])}`;
+      let nomalrowDigi = `${nomalRowDigi(i, labelAndLinkData[i], imgdata[i])}
+  </table>`;
       let nomalrow = `${nomalRowTps(i, labelAndLinkData[i], imgdata[i])}`;
       if (colsLength == 0) {
-        // markUpDIGI += nomalrowDigi;
+        markupDigi += nomalrowDigi;
         markupText += nomalrow;
         i += 1;
       }
       if (colsLength != 0) {
+        let colsDigi = ``;
         let cols = ``;
         for (let j = 0; j <= colsLength - 1; j++) {
           // cols += `<td>${j}</td>`;
+          colsDigi += `${createDigiColumnInrow(
+            i + j,
+            labelAndLinkData[i],
+            imgdata[i + j]
+          )}`;
           cols += `${createTpsColumnInRow(
             i + j,
             labelAndLinkData[i],
             imgdata[i + j]
           )}`;
         }
-
+        let markColdigi = `${openTableTagDIGI()}
+       <tr>${colsDigi}
+      </tr>
+  </table> 
+        `;
         let markCol = `${openTableTagTPS()}
       <tr>${cols}
       </tr>
   </table>`;
-
+        markupDigi += markColdigi;
         markupText += markCol;
         i += colsLength;
       }
@@ -75,24 +90,41 @@ const useGetLayout = () => {
         const nextItemColsLength = boxes[index + 1].cols.length;
         const currentItemColsLenght = item.cols.length;
         // console.log(`Length of next item cols: ${nextItemColsLength}`);
-        currentItemColsLenght == 0 &&
-          nextItemColsLength !== 0 &&
-          (markupText += `
-  </table>`);
+        if (currentItemColsLenght == 0 && nextItemColsLength == 0) {
+          markupDigi += `${openTableTagDIGI()}`;
+        }
+        if (currentItemColsLenght == 0 && nextItemColsLength !== 0) {
+          //         markupDigi += `
+          // </table>`;
+          markupText += `
+  </table>`;
+        }
+        //       currentItemColsLenght == 0 &&
+        //         nextItemColsLength !== 0 &&
+        //         (markupText += `
+        // </table>`);
 
         if (currentItemColsLenght !== 0 && nextItemColsLength == 0) {
+          markupDigi += `${openTableTagDIGI()}`;
           markupText += `${openTableTagTPS()}`;
         }
       } else if (index == lastIndex) {
         console.log("This is the last item, no next item.");
         const lastItemColsLength = boxes[lastIndex].cols.length;
-        lastItemColsLength == 0 &&
-          (markupText += `
-    </table>`);
+        if (lastItemColsLength == 0) {
+          //       markupDigi += `
+          // </table>`;
+          markupText += `
+    </table>`;
+        }
+        //     lastItemColsLength == 0 &&
+        //       (markupText += `
+        // </table>`);
       }
     });
+    // GENRATE --->
     setMarkUpTps(markupText);
-    // setMarkUpDIGI(markUpDIGI);
+    setMarkUpDIGI(markupDigi);
   };
 
   return { boxes, addCol, addRow, handleCreateHTML, markUpTps, markUpDIGI };
