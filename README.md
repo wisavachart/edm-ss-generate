@@ -51,3 +51,6 @@ export default tseslint.config({
 
 ROAD MAP
 [] get header digi & tps
+
+ถ้ามีแก้ก็แค่ ลบของเดิม
+docker-compose up --build

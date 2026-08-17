@@ -1,5 +1,5 @@
 export const nomalRowTps = (
-  index: number,
+  _index: number,
   labelAndLink: {
     label: string;
     link: string;
@@ -14,7 +14,6 @@ export const nomalRowTps = (
             _label="04_ref_offer-warranty_cta"
             href="https://www.samsung.com/th/refrigerators/side-by-side/rs4000dc-sbside-with-large-capacity-rs4000dc-side-by-side-with-large-capacity-583l-silver-rs57dg4000m9st/?samid=|%DA-ZSEA_SEG_BASIC_V2-HASH_EMAIL%|&cid="
             target="_blank">
-            <!-- !IMG_${index + 1}-->
             <img
               src="images/IMGNAME?$ORIGIN_JPG$"
               alt=""
@@ -28,13 +27,11 @@ export const nomalRowTps = (
   return `
       <tr>
         <td width="700">
-          <a
+          <a            
+            href="${labelAndLink.link}?samid=|%DA-ZSEA_SEG_BASIC_V2-HASH_EMAIL%|&cid="
             _label="${labelAndLink.label}"
-            href="${
-              labelAndLink.link
-            }?samid=|%DA-ZSEA_SEG_BASIC_V2-HASH_EMAIL%|&cid="
             target="_blank">
-            <!-- !IMG_${index + 1} -->
+            
             <img
               src="images/${data.name}?$ORIGIN_JPG$"
               alt=""
@@ -47,7 +44,7 @@ export const nomalRowTps = (
 };
 
 export const nomalRowDigi = (
-  index: number,
+  _index: number,
   labelAndLink: {
     label: string;
     link: string;
@@ -83,14 +80,11 @@ export const nomalRowDigi = (
   }
 
   return `
-      <!-- !IMG_${index + 1} -->
         <tr>
           <td align="top">
-            <a
+            <a              
+              href="${labelAndLink.link}?cid=th_ow_email_m-gc-sea_ref_launch_threfsbslaunch--allsegmen01eslnalndsna_image_refsbslaunchwv1-241019_allsegmentsedm"
               _label="${labelAndLink.label}"
-              href="${
-                labelAndLink.link
-              }?cid=th_ow_email_m-gc-sea_ref_launch_threfsbslaunch--allsegmen01eslnalndsna_image_refsbslaunchwv1-241019_allsegmentsedm"
               target="_blank"
               style="display: block; border: none">
               <img

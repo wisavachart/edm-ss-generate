@@ -1,12 +1,12 @@
 export const getTPSFooter = (linkNum: string) => {
   return `
-    <!-- *SECTION Footer -->
     <table
       width="700"
       cellpadding="0"
       cellspacing="0"
       style="margin: 0 auto; border-collapse: collapse">
-      <tr>
+      <tbody>
+       <tr>
         <td>
           <p
             style="
@@ -17,7 +17,7 @@ export const getTPSFooter = (linkNum: string) => {
             ">
             หากคุณไม่สามารถอ่านอีเมลนี้ได้
             <a
-              href="https://www.samsung.com/th/edm/2024/${linkNum}/"
+              href="https://www.samsung.com/th/edm/2025/${linkNum}/"
               target="_blank"
               style="color: #000; font-weight: bold"
               >กรุณาคลิกที่นี่</a
@@ -25,7 +25,7 @@ export const getTPSFooter = (linkNum: string) => {
             <span>Thank you for being our valued customer.</span><br />
             Please
             <a
-              href="https://www.samsung.com/th/edm/2024/${linkNum}/"
+              href="https://www.samsung.com/th/edm/2025/${linkNum}/"
               target="_blank"
               style="color: #000; font-weight: bold"
               >click here</a
@@ -33,9 +33,9 @@ export const getTPSFooter = (linkNum: string) => {
             if you are unable to view content.
           </p>
         </td>
-      </tr>
+       </tr>
+      </tbody>
     </table>
-    <!-- !SECTION Footer -->
   </body>
 </html>`;
 };

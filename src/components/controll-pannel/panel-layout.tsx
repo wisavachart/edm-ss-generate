@@ -7,7 +7,7 @@ const PanelLayout = () => {
   //Input filename
   const { handleChange, localValues } = useGetFileName();
   //Input Layout
-  const { addCol, addRow, handleCreateHTML } = useGetLayout();
+  const { addCol, addRow, handleCreateHTML, reset, undo } = useGetLayout();
 
   return (
     <div className="flex flex-col gap-3">
@@ -86,10 +86,14 @@ const PanelLayout = () => {
         <div className="flex flex-col gap-2 px-4 py-3">
           {/* BTN RESET BACK PREVIEW*/}
           <div className="flex justify-between gap-2">
-            <button className="font-medium text-[14px] btn-border flex-1 rounded-sm">
+            <button
+              onClick={undo}
+              className="font-medium text-[14px] btn-border flex-1 rounded-sm">
               Back
             </button>
-            <button className="font-medium text-[14px] btn-border flex-1 rounded-sm">
+            <button
+              onClick={reset}
+              className="font-medium text-[14px] btn-border flex-1 rounded-sm">
               Reset
             </button>
           </div>

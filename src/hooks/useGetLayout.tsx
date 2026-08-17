@@ -11,6 +11,8 @@ import useLayoutStore from "../store/useLayoutStore";
 
 const useGetLayout = () => {
   const boxes = useLayoutStore((state) => state.boxes);
+  const reset = useLayoutStore((state) => state.resetBoxes);
+  const undo = useLayoutStore((state) => state.undoLastAction);
   const addRow = useLayoutStore((state) => state.addRow);
   const addCol = useLayoutStore((state) => state.addCol);
   const markUpTps = markUpTpsStore((state) => state.markUpTps);
@@ -127,7 +129,16 @@ const useGetLayout = () => {
     setMarkUpDIGI(markupDigi);
   };
 
-  return { boxes, addCol, addRow, handleCreateHTML, markUpTps, markUpDIGI };
+  return {
+    boxes,
+    addCol,
+    addRow,
+    reset,
+    undo,
+    handleCreateHTML,
+    markUpTps,
+    markUpDIGI,
+  };
 };
 
 export default useGetLayout;

@@ -17,18 +17,18 @@ export const getTPSConditionPart = (
     : data;
 
   return `
-  <!-- *SECTION Social Media -->
     <table
       width="700"
       cellpadding="0"
       cellspacing="0"
       style="margin: 0 auto; border-collapse: collapse">
+      <tbody>
       <tr>
         <td width="${data[0].width}">
-          <!-- !APP -->
-          <a
-            _label="999_ref-bs_footer_Samsung Members App"
+          
+          <a            
             href="https://samsungseao.demdex.net/event?d_adsrc=Email&d_event=click&d_campaign=TH23&d_adgroup=Footer&d_rd=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.samsung.android.voc%26hl%3Dth"
+            _label="999_ref-bs_footer_Samsung Members App"
             target="_blank">
             <img
               src="images/${data[0].name}?$ORIGIN_JPG$"
@@ -39,10 +39,10 @@ export const getTPSConditionPart = (
           </a>
         </td>
         <td width="${data[1].width}">
-          <!-- !FB -->
-          <a
-            _label="999_ref-bs_footer_Facebook"
+          
+          <a            
             href="https://samsungseao.demdex.net/event?d_adsrc=Email&d_event=click&d_campaign=TH23&d_adgroup=Footer&d_rd=https%3A%2F%2Fwww.facebook.com%2FSamsungThailand"
+            _label="999_ref-bs_footer_Facebook"
             target="_blank">
             <img
               src="images/${data[1].name}?$ORIGIN_JPG$"
@@ -53,10 +53,10 @@ export const getTPSConditionPart = (
           </a>
         </td>
         <td width="${data[2].width}">
-          <!-- !IG -->
-          <a
-            _label="999_ref-bs_footer_Instagram"
+          
+          <a            
             href="https://samsungseao.demdex.net/event?d_adsrc=Email&d_event=click&d_campaign=TH23&d_adgroup=Footer&d_rd=https%3A%2F%2Fwww.instagram.com%2Fsamsungthailand"
+            _label="999_ref-bs_footer_Instagram"
             target="_blank">
             <img
               src="images/${data[2].name}?$ORIGIN_JPG$"
@@ -67,10 +67,11 @@ export const getTPSConditionPart = (
           </a>
         </td>
         <td width="${data[3].width}">
-          <!-- !TW -->
+          
           <a
-            _label="999_ref-bs_footer_X"
+            
             href="https://samsungseao.demdex.net/event?d_adsrc=Email&d_event=click&d_campaign=TH23&d_adgroup=Footer&d_rd=https%3A%2F%2Ftwitter.com%2FSamsungThailand"
+            _label="999_ref-bs_footer_X"
             target="_blank">
             <img
               src="images/${data[3].name}?$ORIGIN_JPG$"
@@ -80,19 +81,22 @@ export const getTPSConditionPart = (
               style="display: block" />
           </a>
         </td>
-      </tr>
+       </tr>
+      </tbody>
     </table>
     <table
       width="700"
       cellpadding="0"
       cellspacing="0"
       style="margin: 0 auto; border-collapse: collapse">
+      <tbody>
       <tr>
         <td width="${data[4].width}">
-          <!-- !YT -->
+          
           <a
-            _label="999_ref-bs_footer_Youtube"
+            
             href="https://samsungseao.demdex.net/event?d_adsrc=Email&d_event=click&d_campaign=TH23&d_adgroup=Footer&d_rd=https%3A%2F%2Fwww.youtube.com%2Fuser%2FThaiSamsungMobile"
+            _label="999_ref-bs_footer_Youtube"
             target="_blank">
             <img
               src="images/${data[4].name}?$ORIGIN_JPG$"
@@ -103,10 +107,11 @@ export const getTPSConditionPart = (
           </a>
         </td>
         <td width="${data[5].width}">
-          <!-- !LINE -->
+          
           <a
-            _label="999_ref-bs_footer_LINE"
+            
             href="https://samsungseao.demdex.net/event?d_adsrc=Email&d_event=click&d_campaign=TH23&d_adgroup=Footer&d_rd=https%3A%2F%2Flin.ee%2F6x4Oexj"
+            _label="999_ref-bs_footer_LINE"
             target="_blank">
             <img
               src="images/${data[5].name}?$ORIGIN_JPG$"
@@ -117,10 +122,11 @@ export const getTPSConditionPart = (
           </a>
         </td>
         <td width="${data[6].width}">
-          <!-- !TIKTO9 -->
+          
           <a
-            _label="999_ref-bs_footer_Tiktok"
+            
             href="https://samsungseao.demdex.net/event?d_adsrc=Email&d_event=click&d_campaign=TH23&d_adgroup=Footer&d_rd=https%3A%2F%2Fwww.tiktok.com%2F%40samsungthailand"
+            _label="999_ref-bs_footer_Tiktok"
             target="_blank">
             <img
               src="images/${data[6].name}?$ORIGIN_JPG$"
@@ -130,22 +136,23 @@ export const getTPSConditionPart = (
               style="display: block" />
           </a>
         </td>
-      </tr>
+       </tr>
+      </tbody>
     </table>
-    <!-- !SECTION Social Media -->
-    <!-- *SECTION Condition -->
     <table
       width="700"
       cellpadding="0"
       cellspacing="0"
       style="margin: 0 auto; border-collapse: collapse">
+      <tbody>
       <tr>
         <td width="${data[7].width}">
           <a
-            _label="999_ref-bs_footer_legal"
+            
             href="https://www.samsung.com/th/info/legal/?samid=|%DA-ZSEA_SEG_BASIC_V2-HASH_EMAIL%|&cid="
+            _label="999_ref-bs_footer_legal"
             target="_blank">
-            <!-- !LEGAL -->
+            
             <img
               src="images/${data[7].name}?$ORIGIN_JPG$"
               alt=""
@@ -155,7 +162,7 @@ export const getTPSConditionPart = (
           </a>
         </td>
         <td width="${data[8].width}">
-          <!-- !LEGAL -->
+          
           <img
             src="images/${data[8].name}?$ORIGIN_JPG$"
             alt=""
@@ -163,20 +170,23 @@ export const getTPSConditionPart = (
             height="${data[8].height}"
             style="display: block" />
         </td>
-      </tr>
+       </tr>
+      </tbody>
     </table>
     <table
       width="700"
       cellpadding="0"
       cellspacing="0"
       style="margin: 0 auto; border-collapse: collapse">
+      <tbody>
       <tr>
         <td width="${data[9].width}">
           <a
-            _label="999_ref-bs_footer_privacy"
+            
             href="https://www.samsung.com/th/info/privacy/?samid=|%DA-ZSEA_SEG_BASIC_V2-HASH_EMAIL%|&cid="
+            _label="999_ref-bs_footer_privacy"
             target="_blank">
-            <!-- !PRIVACY -->
+            
             <img
               src="images/${data[9].name}?$ORIGIN_JPG$"
               alt=""
@@ -187,10 +197,11 @@ export const getTPSConditionPart = (
         </td>
         <td width="${data[10].width}">
           <a
-            _label="999_ref-bs_footer_unsubscribe"
+            
             href="https://membership.gcrmportal.com/sec/common/optout.html"
+            _label="999_ref-bs_footer_unsubscribe"
             target="_blank">
-            <!-- !UNSUBSCRIBE -->
+           
             <img
               src="images/${data[10].name}?$ORIGIN_JPG$"
               alt=""
@@ -199,13 +210,15 @@ export const getTPSConditionPart = (
               style="display: block" />
           </a>
         </td>
-      </tr>
+       </tr>
+      </tbody>
     </table>
     <table
       width="700"
       cellpadding="0"
       cellspacing="0"
       style="margin: 0 auto; border-collapse: collapse">
+      <tbody>
       <tr>
         <td>
           <img
@@ -216,8 +229,9 @@ export const getTPSConditionPart = (
             style="display: block" />
         </td>
       </tr>
+      </tbody>
     </table>
-    <!-- !SECTION Condition -->`;
+    `;
 };
 
 // DIGI CONDITION
@@ -274,12 +288,8 @@ export const getDIGICondotionPart = (
                 border: none;
               ">
               <tr>
-                <!-- !APP -->
                 <td>
-                  <a
-                    _label="999_ref-bs_footer_Samsung Members App"
-                    href="https://samsungseao.demdex.net/event?d_adsrc=Email&d_event=click&d_campaign=TH23&d_adgroup=Footer&d_rd=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.samsung.android.voc%26hl%3Dth"
-                    target="_blank">
+                  
                     <img
                       src="images/${data[0].name}?$ORIGIN_JPG$"
                       style="
@@ -294,14 +304,11 @@ export const getDIGICondotionPart = (
                       width="100%"
                       border="0"
                       align="center" />
-                  </a>
+                  
                 </td>
-                <!-- !FB -->
+                
                 <td>
-                  <a
-                    _label="999_ref-bs_footer_Facebook"
-                    href="https://samsungseao.demdex.net/event?d_adsrc=Email&d_event=click&d_campaign=TH23&d_adgroup=Footer&d_rd=https%3A%2F%2Fwww.facebook.com%2FSamsungThailand"
-                    target="_blank">
+                 
                     <img
                       src="images/${data[1].name}?$ORIGIN_JPG$"
                       style="
@@ -316,14 +323,11 @@ export const getDIGICondotionPart = (
                       width="100%"
                       border="0"
                       align="center" />
-                  </a>
+                  
                 </td>
-                <!-- !IG -->
+                
                 <td>
-                  <a
-                    _label="999_ref-bs_footer_Instagram"
-                    href="https://samsungseao.demdex.net/event?d_adsrc=Email&d_event=click&d_campaign=TH23&d_adgroup=Footer&d_rd=https%3A%2F%2Fwww.instagram.com%2Fsamsungthailand"
-                    target="_blank">
+                  
                     <img
                       src="images/${data[2].name}?$ORIGIN_JPG$"
                       style="
@@ -338,14 +342,11 @@ export const getDIGICondotionPart = (
                       width="100%"
                       border="0"
                       align="center" />
-                  </a>
+                  
                 </td>
-                <!-- !TW -->
+                
                 <td>
-                  <a
-                    _label="999_ref-bs_footer_X"
-                    href="https://samsungseao.demdex.net/event?d_adsrc=Email&d_event=click&d_campaign=TH23&d_adgroup=Footer&d_rd=https%3A%2F%2Ftwitter.com%2FSamsungThailand"
-                    target="_blank">
+                  
                     <img
                       src="images/${data[3].name}?$ORIGIN_JPG$"
                       style="
@@ -360,7 +361,7 @@ export const getDIGICondotionPart = (
                       width="100%"
                       border="0"
                       align="center" />
-                  </a>
+                  
                 </td>
               </tr>
             </table>
@@ -381,12 +382,9 @@ export const getDIGICondotionPart = (
                 border: none;
               ">
               <tr>
-                <!-- !YT -->
+                
                 <td>
-                  <a
-                    _label="999_ref-bs_footer_Youtube"
-                    href="https://samsungseao.demdex.net/event?d_adsrc=Email&d_event=click&d_campaign=TH23&d_adgroup=Footer&d_rd=https%3A%2F%2Fwww.youtube.com%2Fuser%2FThaiSamsungMobile"
-                    target="_blank">
+                  
                     <img
                       src="images/${data[4].name}?$ORIGIN_JPG$"
                       style="
@@ -401,14 +399,11 @@ export const getDIGICondotionPart = (
                       width="100%"
                       border="0"
                       align="center" />
-                  </a>
+                  
                 </td>
-                <!-- !LINE -->
+               
                 <td>
-                  <a
-                    _label="999_ref-bs_footer_LINE"
-                    href="https://samsungseao.demdex.net/event?d_adsrc=Email&d_event=click&d_campaign=TH23&d_adgroup=Footer&d_rd=https%3A%2F%2Flin.ee%2F6x4Oexj"
-                    target="_blank">
+                  
                     <img
                       src="images/${data[5].name}?$ORIGIN_JPG$"
                       style="
@@ -423,14 +418,11 @@ export const getDIGICondotionPart = (
                       width="100%"
                       border="0"
                       align="center" />
-                  </a>
+                  
                 </td>
-                <!-- !TIKTOK -->
+               
                 <td>
-                  <a
-                    _label="999_ref-bs_footer_Tiktok"
-                    href="https://samsungseao.demdex.net/event?d_adsrc=Email&d_event=click&d_campaign=TH23&d_adgroup=Footer&d_rd=https%3A%2F%2Fwww.tiktok.com%2F%40samsungthailand"
-                    target="_blank">
+                  
                     <img
                       src="images/${data[6].name}?$ORIGIN_JPG$"
                       style="
@@ -445,11 +437,11 @@ export const getDIGICondotionPart = (
                       width="100%"
                       border="0"
                       align="center" />
-                  </a>
+                 
                 </td>
               </tr>
             </table>
-            <!-- *SECTION Condition -->
+          
             <table
               border="0"
               align="center"
@@ -467,12 +459,9 @@ export const getDIGICondotionPart = (
                 border: none;
               ">
               <tr>
-                <!-- !LEGAL -->
+               
                 <td>
-                  <a
-                    _label="999_ref-bs_footer_legal"
-                    href="https://www.samsung.com/th/info/legal/?cid=th_ow_email_m-gc-sea_ref_launch_threfsbslaunch--allsegmen01eslnalndsna_image_refsbslaunchwv1-241019_allsegmentsedm"
-                    target="_blank">
+                 
                     <img
                       src="images/${data[7].name}?$ORIGIN_JPG$"
                       style="
@@ -487,9 +476,9 @@ export const getDIGICondotionPart = (
                       width="100%"
                       border="0"
                       align="center" />
-                  </a>
+                  
                 </td>
-                <!-- !LEGAL -->
+               
                 <td>
                   <img
                     src="images/${data[8].name}?$ORIGIN_JPG$"
@@ -525,12 +514,9 @@ export const getDIGICondotionPart = (
                 border: none;
               ">
               <tr>
-                <!-- !PRIVACY -->
+              
                 <td>
-                  <a
-                    _label="999_ref-bs_footer_privacy"
-                    href="https://www.samsung.com/th/info/privacy/?cid=th_ow_email_m-gc-sea_ref_launch_threfsbslaunch--allsegmen01eslnalndsna_image_refsbslaunchwv1-241019_allsegmentsedm"
-                    target="_blank">
+                 
                     <img
                       src="images/${data[9].name}?$ORIGIN_JPG$"
                       style="
@@ -545,13 +531,10 @@ export const getDIGICondotionPart = (
                       width="100%"
                       border="0"
                       align="center" />
-                  </a>
+                 
                 </td>
                 <td>
-                  <a
-                    _label="999_ref-bs_footer_unsubscribe"
-                    href="https://membership.gcrmportal.com/sec/common/optout.html"
-                    target="_blank">
+                 
                     <img
                       src="images/${data[10].name}?$ORIGIN_JPG$"
                       style="
@@ -566,7 +549,7 @@ export const getDIGICondotionPart = (
                       width="100%"
                       border="0"
                       align="center" />
-                  </a>
+                  
                 </td>
               </tr>
             </table>

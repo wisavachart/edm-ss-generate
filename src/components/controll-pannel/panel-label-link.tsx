@@ -51,18 +51,3 @@ const PanelLabelLink = () => {
 };
 
 export default PanelLabelLink;
-
-// State สำหรับเก็บค่าของ link และ label ของแต่ละ input
-// const [inputs, setInputs] = useState(
-//   contentImageData.map(() => ({ label: "", link: "" }))
-// );
-
-// console.log(inputs);
-
-// // Handle การเปลี่ยนแปลง input
-// const handleInputChange = (index: number, field: string, value: string) => {
-//   const updatedInputs = inputs.map((input, i) =>
-//     i === index ? { ...input, [field]: value } : input
-//   );
-//   setInputs(updatedInputs);
-// };
