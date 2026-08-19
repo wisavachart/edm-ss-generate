@@ -4,7 +4,7 @@ export const createTpsColumnInRow = (
     label: string;
     link: string;
   },
-  data?: { name: string; width: number; height: number }
+  data?: { name: string; width: number; height: number },
 ) => {
   if (!data) {
     return `
@@ -31,7 +31,7 @@ export const createTpsColumnInRow = (
             target="_blank">            
             <img
               src="images/${data.name}?$ORIGIN_JPG$"
-              alt=""
+              alt="${labelAndLink.label}"
               width="${data.width}"
               height="${data.height}"
               style="display: block" />
@@ -45,7 +45,7 @@ export const createDigiColumnInrow = (
     label: string;
     link: string;
   },
-  data?: { name: string; width: number; height: number }
+  data?: { name: string; width: number; height: number },
 ) => {
   if (!data) {
     return `
@@ -83,7 +83,7 @@ export const createDigiColumnInrow = (
                 src="images/${data.name}?$ORIGIN_JPG$"
                 width="700"
                 height=""
-                alt=""
+                alt="${labelAndLink.label}"
                 style="
                   padding: 0;
                   display: block;
